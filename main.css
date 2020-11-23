@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
+body {
+  margin:0;
+}
+
+header {
+  height:180px;
+}
+
+.group_logo {
+  display:flex;
+  justify-content:center;
+}
+
+.logo {
+  display:flex;
+  justify-content:center;
+  font-weight:bold;
+  font-size:70px;
+  cursor:default;
+  font-family: 'Sacramento', cursive;
+  margin-top:30px;
+  margin-bottom:5px;
+}
+
+.btn_compte {
+  position:absolute;
+  top:25px;
+  right:30px;
+  display:flex;
+  align-items:center
+}
+
+.btn_compte > a {
+  display:flex;
+  flex-direction:column;
+  margin-left:10px;
+  margin-right:10px;
+  margin-top:5px;
+  font-size:20px;
+  text-decoration:none;
+  color:black;
+  padding:5px;
+  border-radius:10px;
+}
+
+.btn_compte > a:hover {
+  background-color:rgba(206, 224, 237, 0.5);
+}
+
+.btn_compte > a > p {
+  margin-top:2px;
+  margin-bottom:2px;
+  font-size:15px;
+}
+
+.btn_compte > a > i {
+  display:flex;
+  justify-content:center;
+}
+
+.rs {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.rs > a {
+  margin-left:20px;
+  margin-right:20px;
+  font-size:30px;
+  margin-top:6px;
+}
+
+.rs > a:hover {
+  font-size:35px;
+  margin-left:18px;
+  margin-right:18px;
+  margin-top:0;
+}
+
+.fa-facebook-square {
+  color: rgba(59,89,153,0.8);
+}
+
+.fa-instagram-square {
+  color:rgba(228,64,95,0.8);
+}
+
+.fa-pinterest-square {
+  color:rgba(189,8,28,0.8);
+}
+
+main {
+  margin-top:40px;
+  padding-left:20px;
+  padding-right:20px;
+  font-family: 'Cookie', cursive;
+  font-size:20px;
+}
+
+.description {
+  padding:30px 10px;
+  background-color:rgba(248, 240, 237, 1);
+  border-radius:5px;
+  text-align:center;
+}
+
+.description p {
+  margin-top:15px;
+  margin-bottom:15px;
+  font-size:25px;
+}
+
+.category {
+  border-top:1px solid black;
+  border-left:1px solid black;
+  margin-top:50px;
+  padding-bottom:20px;
+  padding-left:10px;
+  border-radius:5px;
+}
+
+.articles {
+  display:flex;
+  justify-content:space-evenly;
+}
+
+.articles > a {
+  position:relative;
+  text-align:center;
+  padding:15px;
+  background-color:rgba(248, 240, 237, 1);
+  text-decoration:none;
+  color:black;
+}
+
+.articles img {
+  height:190px;
+  width:190px;
+}
+
+.articles a::before {
+  content:"";
+  position:absolute;
+  top:-10px;
+  left:85px;
+  height:20px;
+  width:50px;
+  background-image:url(img/background/backgroundScotch.jpg);
+  background-size:cover;
+}
+
+.articles a:hover {
+  box-shadow:0 0 10px 1px rgba(0,0,0,0.3);
+}
+
+form ul {
+  list-style:none;
+}
