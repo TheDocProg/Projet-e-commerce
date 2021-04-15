@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/admin.css">
+  <title>Gerer les stock</title>
+</head>
+<body>
+  <div class="stock_container">
+    <?php foreach($articles as $article): ?>
+      <div id="count" class="stock_box">
+        <img src="../<?= $article['picture'] ?>" alt="<?= $article['alt'] ?>">
+        <section>
+          <h2><?= htmlspecialchars($article['title']) ?></h2>
+          <div>
+            <label for="stock">Stock :</label>
+            <input type="number" id="stock<?= $article['id'] ?>" name="stock" value="<?= $article['stock'] ?>" required min="0" />
+          </div>
+          <button class="stock_submit" value="<?= $article['id'] ?>" id="submit<?= $j ?>">Modifier</button>
+        </section>
+      </div>
+      <?php $j++; ?>
+    <?php endforeach; ?>
+  </div>
+  <script src="../js/jquery-3.5.1.js"></script>
+  <script src="js/stock.js"></script>
+</body>
+</html>
