@@ -1,0 +1,1483 @@
+:@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lemonada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+
+h2 {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+h1 {
+  font-family: 'Allura', cursive;
+}
+
+/************* Mobile *************/
+@media screen and (max-width: 768px)
+{
+  /************** Layout **************/
+
+  body {
+    margin:0;
+    min-width: 465px;
+  }
+
+  header {
+    border-bottom: 1px solid black;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.3);
+    padding-bottom: 30px;
+  }
+
+  .logo {
+    display:flex;
+    justify-content:center;
+    font-weight:bold;
+    font-size:70px;
+    margin-top:30px;
+    margin-bottom:5px;
+    text-decoration: none;
+    font-family: 'Allura', cursive;
+    color: transparent;
+    background-image: url(../img/background/back.jpg);
+  }
+
+  .group_logo {
+    display:flex;
+    justify-content:center;
+    flex-direction: column;
+  }
+
+  .btn_compte {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding-bottom: 10px;
+  }
+
+  .btn_compte > a {
+    position: relative;
+    display:flex;
+    flex-direction:column;
+    margin-left:10px;
+    margin-right:10px;
+    margin-top:5px;
+    font-size:20px;
+    text-decoration:none;
+    color:black;
+    padding:5px;
+    border-radius:10px;
+  }
+
+  .btn_compte > a > p {
+    margin-top:2px;
+    margin-bottom:2px;
+    font-size:15px;
+  }
+
+  .btn_compte > a > i {
+    display:flex;
+    justify-content:center;
+  }
+
+  .notif {
+    position: absolute;
+    top: 0;
+    left: 60%;
+    font-size: 12px;
+    color: #DF0000;
+  }
+
+  .rs {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+
+  .rs > a {
+    margin-left:20px;
+    margin-right:20px;
+    font-size:30px;
+    margin-top:6px;
+  }
+
+  .fa-facebook-square {
+    color: rgba(59,89,153,0.8);
+  }
+
+  .fa-instagram-square {
+    color:rgba(228,64,95,0.8);
+  }
+
+  .fa-pinterest-square {
+    color:rgba(189,8,28,0.8);
+  }
+
+  /************** Home ***************/
+
+  main {
+    padding-top:40px;
+    padding-left:20px;
+    padding-right:20px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size:20px;
+    position: relative;
+  }
+
+  .description {
+    padding:30px 10px;
+    background-color:rgba(248, 240, 237, 1);
+    border-radius:5px;
+    text-align:center;
+  }
+
+  .description p {
+    margin-top:15px;
+    margin-bottom:15px;
+    font-size:17px;
+  }
+
+  .category {
+    border-top:1px solid black;
+    border-left:1px solid black;
+    margin-top:50px;
+    padding-bottom:20px;
+    padding-left:20px;
+    border-radius:5px;
+  }
+
+  .category > h2 {
+    margin: 15px;
+  }
+
+  .articles {
+    display:flex;
+    overflow-x: scroll;
+    padding: 10px;
+  }
+
+  .articles > a {
+    position:relative;
+    text-align:center;
+    padding:15px;
+    background-color:rgba(248, 240, 237, 1);
+    text-decoration:none;
+    color:black;
+    margin-right: 50px;
+  }
+
+  .articles img {
+    height:150px;
+    width:150px;
+  }
+
+  .articles h3 {
+    font-size: 17px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .articles a::before {
+    content:"";
+    position:absolute;
+    top:-10px;
+    left:35%;
+    height:20px;
+    width:30%;
+    background-image: url(../img/background/backgroundScotch.jpg);
+    background-size:cover;
+  }
+
+  /************** Login / register **************/
+
+  /* header */
+
+  .btn-group {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+  }
+
+  .btn-group a {
+    color: black;
+    font-size: 19px;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: rgba(248, 240, 237, 1);
+  }
+
+  /* main */
+
+  .login_main {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin-top: 0;
+    position: relative;
+  }
+
+  .login_main::before {
+      content: "";
+      background-image: url(../img/background/background-connexion.jpg);
+      background-size: cover;
+      opacity: 0.6;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1;
+  }
+
+  .login_form {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px;
+    background-color: rgba(248, 240, 237, 1);
+    position: relative;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  }
+
+  .login_form::before {
+    content:"";
+    position:absolute;
+    top:-23px;
+    left:35%;
+    height:35px;
+    width:30%;
+    background-image:url(../img/background/backgroundScotch.jpg);
+    background-size:cover;
+  }
+
+  .login_form h2 {
+    margin-top: 0;
+    font-size: 40px;
+  }
+
+  .login_form ul {
+    list-style: none;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .login_form li {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+  }
+
+  .login_form input {
+    border-radius: 10px;
+    border-color: #AAA;
+    border-style: solid;
+    font-size: 17px;
+    padding: 5px;
+  }
+
+  .login_form input:focus {
+    outline: none;
+    border-color: black;
+  }
+
+  .login_form label {
+    width: 45%;
+    font-size: 18px;
+  }
+
+  .login_form button {
+    font-size: 19px;
+    margin-top: 10px;
+    padding: 8px;
+    background-color: rgba(206, 224, 237, 0.5);
+    border-radius: 10px;
+    border: 1px solid black;
+    font-family: 'Lemonada', cursive;
+  }
+
+  /****************** Cart *********************/
+
+  .section {
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 95%;
+  }
+
+  .section img {
+    height: 170px;
+    width: 170px;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .aside {
+    padding-left: 20px;
+  }
+
+  .aside a, .aside h3 {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .cart_price {
+    width: 16%;
+    margin: 5px;
+    font-size: 15px;
+  }
+
+  .quantity p {
+    display: inline;
+    font-size: 14px;
+  }
+
+  .cart_total {
+    font-family: 'Lemonada', cursive;
+    font-size: 20px;
+  }
+
+  .button {
+    padding: 10px;
+    font-size: 19px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgba(248, 240, 237, 1);
+  }
+
+  .btn_form {
+    margin-bottom: 20px;
+  }
+
+  /******************* Article ****************/
+
+  .article_top {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+  }
+
+  .show-picture {
+    display:flex;
+    justify-content:left;
+  }
+
+  .show-picture > div {
+    position: relative;
+    text-align: center;
+    padding: 40px;
+    background-color: rgba(248, 240, 237, 1);
+    text-decoration: none;
+    color: black;
+    margin-right: 50px;
+  }
+
+  .show-picture img {
+    width: 350px;
+    height: 350px;
+  }
+
+  .show-picture div::before {
+    content:"";
+    position: absolute;
+    top: -15px;
+    left: 40%;
+    height: 30px;
+    width: 20%;
+    background-image: url(../img/background/backgroundScotch.jpg);
+    background-size: cover;
+  }
+
+  .article_price {
+    width: 70%;
+    padding-left: 30px;
+    font-size: 55px;
+    border-left: 1px solid black;
+  }
+
+  .article_title {
+    font-size: 45px;
+    margin-top: 30px;
+  }
+
+  .article_price h2 {
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-size: 40px;
+  }
+
+  .lots {
+    font-size: 30px;
+    font-weight: normal;
+    margin-top: 0;
+  }
+
+  .describe {
+    width: 95%;
+    padding-left: 10px;
+    padding-top: 10px;
+    margin-top: 40px;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    font-size: 16px;
+  }
+
+  .describe h2 {
+    font-size: 30px;
+  }
+
+  .popup {
+    position: fixed;
+    bottom: 50%;
+    left: 35%;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgba(248, 240, 237, 1);
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 0 6px rgba(0,0,0,0.6);
+  }
+
+  .popup i {
+    color: #0CCC23;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+}
+
+/***************** Tablet ****************/
+@media screen and (min-width: 769px) and (max-width: 1124px)
+{
+  body {
+    margin:0;
+  }
+
+  header {
+    border-bottom: 1px solid black;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.3);
+    padding-bottom: 30px;
+  }
+
+  .logo {
+    display:flex;
+    justify-content:center;
+    font-weight:bold;
+    font-size:70px;
+    margin-top:30px;
+    margin-bottom:5px;
+    text-decoration: none;
+    font-family: 'Allura', cursive;
+    color: black;
+  }
+
+  .group_logo {
+    display:flex;
+    justify-content:center;
+    flex-direction: column;
+  }
+
+  .btn_compte {
+    position:absolute;
+    top:50px;
+    right:30px;
+    display:flex;
+    align-items:center
+  }
+
+  .btn_compte > a {
+    display:flex;
+    flex-direction:column;
+    margin-left:10px;
+    margin-right:10px;
+    margin-top:5px;
+    font-size:20px;
+    text-decoration:none;
+    color:black;
+    padding:5px;
+    border-radius:10px;
+  }
+
+  .btn_compte > a > p {
+    margin-top:2px;
+    margin-bottom:2px;
+    font-size:15px;
+  }
+
+  .btn_compte > a > i {
+    display:flex;
+    justify-content:center;
+  }
+
+  .notif {
+    position: absolute;
+    top: 5px;
+    left: 80%;
+    font-size: 12px;
+    color: #DF0000;
+  }
+
+  .rs {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+
+  .rs > a {
+    margin-left:20px;
+    margin-right:20px;
+    font-size:30px;
+    margin-top:6px;
+  }
+
+  .fa-facebook-square {
+    color: rgba(59,89,153,0.8);
+  }
+
+  .fa-instagram-square {
+    color:rgba(228,64,95,0.8);
+  }
+
+  .fa-pinterest-square {
+    color:rgba(189,8,28,0.8);
+  }
+
+  /************** Home ***************/
+
+  main {
+    padding-top:40px;
+    padding-left:20px;
+    padding-right:20px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size:20px;
+    position: relative;
+  }
+
+  main::after {
+  content: "";
+  background: url(../img/background/try.jpg);
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+  .description {
+    padding:30px 10px;
+    background-color:rgba(248, 240, 237, 1);
+    border-radius:5px;
+    text-align:center;
+  }
+
+  .description p {
+    margin-top:15px;
+    margin-bottom:15px;
+    font-size:17px;
+  }
+
+  .category {
+    border-top:1px solid black;
+    border-left:1px solid black;
+    margin-top:50px;
+    padding-bottom:20px;
+    padding-left:30px;
+    border-radius:5px;
+  }
+
+  .category > h2 {
+    margin: 15px;
+  }
+
+  .articles {
+    display:flex;
+    overflow-x: scroll;
+    padding: 10px;
+  }
+
+  .articles > a {
+    position:relative;
+    text-align:center;
+    padding:15px;
+    background-color:rgba(248, 240, 237, 1);
+    text-decoration:none;
+    color:black;
+    margin-right: 50px;
+  }
+
+  .articles img {
+    height:180px;
+    width:180px;
+  }
+
+  .articles h3 {
+    font-size: 17px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .articles a::before {
+    content:"";
+    position:absolute;
+    top:-10px;
+    left:35%;
+    height:20px;
+    width:30%;
+    background-image: url(../img/background/backgroundScotch.jpg);
+    background-size:cover;
+  }
+
+  /**************** Login / register ****************/
+
+  /* header */
+
+  .btn-group {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 20px;
+    padding-right: 30px;
+  }
+
+  .btn-group a {
+    color: black;
+    font-size: 19px;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: rgba(248, 240, 237, 1);
+  }
+
+  /* main */
+
+  .login_main {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    margin-top: 0;
+    position: relative;
+  }
+
+  .login_main::before {
+      content: "";
+      background-image: url(../img/background/background-connexion.jpg);
+      background-size: cover;
+      opacity: 0.6;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1;
+  }
+
+  .login_form {
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px;
+    background-color: rgba(248, 240, 237, 1);
+    position: relative;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  }
+
+  .login_form::before {
+    content:"";
+    position:absolute;
+    top:-23px;
+    left:35%;
+    height:35px;
+    width:30%;
+    background-image:url(../img/background/backgroundScotch.jpg);
+    background-size:cover;
+  }
+
+  .login_error {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: rgba(221, 59, 59, 0.5);
+    border: 1px solid #C83434;
+  }
+
+  .login_error h3 {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .login_form h2 {
+    margin-top: 0;
+    font-size: 40px;
+  }
+
+  .login_form ul {
+    list-style: none;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .login_form li {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+  }
+
+  .login_form input {
+    border-radius: 10px;
+    border-color: #AAA;
+    border-style: solid;
+    font-size: 17px;
+    padding: 5px;
+  }
+
+  .login_form input:focus {
+    outline: none;
+    border-color: black;
+  }
+
+  .login_form label {
+    width: 45%;
+    font-size: 18px;
+  }
+
+  .login_form button {
+    font-size: 19px;
+    margin-top: 10px;
+    padding: 8px;
+    background-color: rgba(206, 224, 237, 0.5);
+    border-radius: 10px;
+    border: 1px solid black;
+    font-family: 'Lemonada', cursive;
+  }
+
+  /****************** Cart *********************/
+
+  .section {
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 90%;
+  }
+
+  .section img {
+    height: 170px;
+    width: 170px;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .aside {
+    padding-left: 20px;
+  }
+
+  .aside a, .aside h3 {
+    text-decoration: none;
+    color: black;
+    font-size: 19px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .cart_price {
+    margin: 10px;
+    font-size: 19px;
+  }
+
+  .quantity {
+    padding: 5px;
+  }
+
+  .quantity p {
+    display: inline;
+    font-size: 17px;
+  }
+
+  .cart_total {
+    font-family: 'Lemonada', cursive;
+    font-size: 20px;
+  }
+
+  .button {
+    padding: 10px;
+    font-size: 19px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgba(248, 240, 237, 1);
+  }
+
+  .btn_form {
+    margin-bottom: 20px;
+  }
+
+  /******************* Article ****************/
+
+  .article_top {
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+  }
+
+  .show-picture {
+    display:flex;
+    justify-content:left;
+  }
+
+  .show-picture > div {
+    position: relative;
+    text-align: center;
+    padding: 40px;
+    background-color: rgba(248, 240, 237, 1);
+    text-decoration: none;
+    color: black;
+    margin-right: 50px;
+  }
+
+  .show-picture img {
+    width: 350px;
+    height: 350px;
+  }
+
+  .show-picture div::before {
+    content:"";
+    position: absolute;
+    top: -15px;
+    left: 40%;
+    height: 30px;
+    width: 20%;
+    background-image: url(../img/background/backgroundScotch.jpg);
+    background-size: cover;
+  }
+
+  .article_price {
+    width: 70%;
+    padding-left: 30px;
+    font-size: 55px;
+    border-left: 1px solid black;
+  }
+
+  .article_title {
+    font-size: 50px;
+    margin-top: 30px;
+  }
+
+  .article_price h2 {
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-size: 50px;
+  }
+
+  .lots {
+    font-size: 30px;
+    font-weight: normal;
+    margin-top: 0;
+  }
+
+  .describe {
+    width: 80%;
+    padding-left: 10px;
+    padding-top: 10px;
+    margin-top: 40px;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    font-size: 16px;
+  }
+
+  .describe h2 {
+    font-size: 30px;
+  }
+
+  .popup {
+    position: fixed;
+    bottom: 50%;
+    left: 35%;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgba(248, 240, 237, 1);
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 0 6px rgba(0,0,0,0.6);
+  }
+
+  .popup i {
+    color: #0CCC23;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+}
+
+/************* Laptop / Desktop *************/
+@media screen and (min-width: 1125px)
+{
+  body {
+    margin:0;
+  }
+
+  header {
+    border-bottom: 1px solid black;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.3);
+    padding-bottom: 30px;
+  }
+
+  .logo {
+    display:flex;
+    justify-content:center;
+    font-weight:bold;
+    font-size:70px;
+    margin-top:30px;
+    margin-bottom:5px;
+    text-decoration: none;
+    font-family: 'Sacramento', cursive;
+    color: black;
+  }
+
+  .group_logo {
+    display:flex;
+    justify-content:center;
+    flex-direction: column;
+  }
+
+  .btn_compte {
+    position:absolute;
+    top:50px;
+    right:50px;
+    display:flex;
+    align-items:center
+  }
+
+  .btn_compte > a {
+    display:flex;
+    flex-direction:column;
+    margin-left:15px;
+    font-size:20px;
+    text-decoration:none;
+    color:black;
+    padding:5px;
+    border-radius:10px;
+  }
+
+  .btn_compte > a:hover {
+    background-color:rgba(206, 224, 237, 0.5);
+  }
+
+  .btn_compte > a > p {
+    margin-top:2px;
+    margin-bottom:2px;
+    font-size:15px;
+  }
+
+  .btn_compte > a > i {
+    display:flex;
+    justify-content:center;
+  }
+
+  .notif {
+    position: absolute;
+    top: 3px;
+    left: 85%;
+    font-size: 12px;
+    color: #DF0000;
+  }
+
+  .rs {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+
+  .rs > a {
+    margin-left:20px;
+    margin-right:20px;
+    font-size:30px;
+    margin-top:6px;
+  }
+
+  .rs > a:hover {
+    font-size:35px;
+    margin-left:18px;
+    margin-right:18px;
+    margin-top:0;
+  }
+
+  .fa-facebook-square {
+    color: rgba(59,89,153,0.8);
+  }
+
+  .fa-instagram-square {
+    color:rgba(228,64,95,0.8);
+  }
+
+  .fa-pinterest-square {
+    color:rgba(189,8,28,0.8);
+  }
+
+  /************** Home ***************/
+
+  main {
+    padding-top:40px;
+    padding-left:20px;
+    padding-right:20px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size:20px;
+    position: relative;
+  }
+
+  main::after {
+  content: "";
+  background: url(../img/background/try.jpg);
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+  .description {
+    padding:30px 10px;
+    background-color: rgba(120, 162, 166, 0.5);
+    border-radius:5px;
+    text-align:center;
+    position: relative;
+    /* box-shadow:0 0 6px 1px rgba(0,0,0,0.3); */
+  }
+
+  /* .description::before {
+    content:"";
+    position:absolute;
+    top: -15px;
+    left:40%;
+    height:30px;
+    width:20%;
+    background-image: url(../img/background/backgroundScotch.jpg);
+    background-size:cover;
+  } */
+
+  .description p {
+    margin-top:15px;
+    margin-bottom:15px;
+    font-size:17px;
+  }
+
+  .category {
+    border-top:1px solid black;
+    border-left:1px solid black;
+    margin-top:50px;
+    padding-bottom:20px;
+    padding-left:30px;
+    border-radius:5px;
+  }
+
+  .category > h2 {
+    margin: 15px;
+    font-size: 40px;
+  }
+
+  .articles {
+    display:flex;
+    overflow-x: scroll;
+    padding: 10px;
+  }
+
+  .articles > a {
+    position:relative;
+    text-align:center;
+    padding:15px;
+    background-color: white;
+    text-decoration:none;
+    color:black;
+    margin-right: 50px;
+    box-shadow:0 0 6px 1px rgba(0,0,0,0.3);
+  }
+
+  .articles a:hover {
+    box-shadow:0 0 10px 2px rgba(0,0,0,0.3);
+  }
+
+  .articles img {
+    height:220px;
+    width:220px;
+  }
+
+  .articles h3 {
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .articles a::before {
+    content:"";
+    position:absolute;
+    top:-10px;
+    left:35%;
+    height:20px;
+    width:30%;
+    background-image: url(../img/background/backgroundScotch.jpg);
+    background-size:cover;
+  }
+
+  .cookie {
+    position: fixed;
+    width: 70%;
+    left: 15%;
+    bottom: 0;
+    border: 1px solid black;
+    background-color: rgba(248, 240, 237, 1);
+    text-align: center;
+    padding: 5px;
+  }
+
+  .cookie > p {
+    font-weight: bold;
+  }
+
+  /************** Login / register **************/
+
+  /* header */
+
+  .btn-group {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 10px;
+    padding-right: 50px;
+  }
+
+  .btn-group a {
+    color: black;
+    font-size: 19px;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: rgba(248, 240, 237, 1);
+  }
+
+  .btn-group a:hover {
+    background-color: rgba(206, 224, 237, 0.7);
+  }
+
+  /* main */
+
+  .login_main {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    margin-top: 0;
+    position: relative;
+  }
+
+  .login_error {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: rgba(221, 59, 59, 0.5);
+    border: 1px solid #C83434;
+  }
+
+  .login_error h3 {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .login_form {
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px;
+    background-color: rgba(120, 162, 166, 0.3);
+    position: relative;
+  }
+
+  .login_form h2 {
+    margin-top: 0;
+    font-size: 45px;
+  }
+
+  .login_form ul {
+    list-style: none;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .login_form li {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 30px;
+  }
+
+  .login_form input {
+    height: 23px;
+    border-radius: 10px;
+    border-color: #AAA;
+    border-style: solid;
+    font-size: 19px;
+    padding: 5px;
+  }
+
+  .login_form input:focus {
+    outline: none;
+    border-color: black;
+  }
+
+  .login_form label {
+    width: 35%;
+    font-size: 20px;
+  }
+
+  .login_form input[type=number] {
+    /* Firefox */
+    -moz-appearance: textfield;
+}
+
+/* Chrome */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin:0;
+}
+
+/* Opéra*/
+input::-o-inner-spin-button,
+input::-o-outer-spin-button {
+	-o-appearance: none;
+	margin:0
+  }
+
+  .login_checkbox {
+    padding: 10px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .login_checkbox > input {
+    width: 18px;
+    border-radius: 10px;
+  }
+
+  .login_form button {
+    font-size: 19px;
+    margin-top: 20px;
+    padding: 8px;
+    background-color: rgba(120, 162, 166, 0.7);
+    border-radius: 10px;
+    border: 1px solid black;
+    font-family: 'Lemonada', cursive;
+  }
+
+  .login_form button:hover {
+    background-color:  #669A9F;
+  }
+
+  /****************** Cart *********************/
+
+  .cartmain {
+    min-height: 400px;
+  }
+
+  .section {
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 80%;
+  }
+
+  .section img {
+    height: 200px;
+    width: 200px;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .aside {
+    padding-left: 20px;
+  }
+
+  .aside a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .cart_price {
+    margin: 10px;
+    font-size: 20px;
+  }
+
+  .quantity {
+    padding: 10px;
+  }
+
+  .quantity p {
+    display: inline;
+  }
+
+  .cart_total {
+    font-family: 'Lemonada', cursive;
+    font-size: 20px;
+  }
+
+  .button {
+    padding: 10px;
+    font-size: 21px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgba(248, 240, 237, 1);
+  }
+
+  .button:hover {
+    background-color: #F0B099;
+    cursor: pointer;
+  }
+
+  .btn_form {
+    margin-bottom: 20px;
+  }
+
+  /******************* Article ****************/
+
+  .article_top {
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+  }
+
+  .show-picture {
+    display:flex;
+    justify-content:left;
+  }
+
+  .show-picture > div {
+    position: relative;
+    text-align: center;
+    padding: 40px;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    margin-right: 50px;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.3);
+  }
+
+  .show-picture img {
+    width: 400px;
+    height: 400px;
+  }
+
+  .show-picture div::before {
+    content:"";
+    position: absolute;
+    top: -15px;
+    left: 35%;
+    height: 30px;
+    width: 30%;
+    background-image: url(../img/background/backgroundScotch.jpg);
+    background-size: cover;
+  }
+
+  .article_price {
+    width: 70%;
+    padding-left: 30px;
+    font-size: 55px;
+    border-left: 1px solid black;
+  }
+
+  .article_title {
+    font-size: 50px;
+    margin-top: 30px;
+  }
+
+  .article_price h2 {
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-size: 50px;
+  }
+
+  .lots {
+    font-size: 30px;
+    font-weight: normal;
+    margin-top: 0;
+  }
+
+  .addcart {
+    padding: 10px;
+  }
+
+  .addcart > select {
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 8px;
+  }
+
+  .addcart > button {
+    font-size: 20px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 8px;
+    outline: none;
+    background-color: rgba(120, 162, 166, 0.7);
+  }
+
+  .addcart > button:hover {
+    background-color: #669A9F;
+  }
+
+  .describe {
+    width: 80%;
+    padding-left: 10px;
+    padding-top: 10px;
+    margin-top: 40px;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    font-size: 16px;
+  }
+
+  .describe h2 {
+    font-size: 30px;
+  }
+
+  .popup {
+    position: fixed;
+    bottom: 50%;
+    left: 35%;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgba(248, 240, 237, 1);
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 0 6px rgba(0,0,0,0.6);
+  }
+
+  .popup i {
+    color: #0CCC23;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+}

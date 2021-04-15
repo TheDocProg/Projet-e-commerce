@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <title>Cotonnade & Co.</title>
+</head>
+<body>
+  <header class="header">
+    <section class="group_logo">
+      <a class="logo" href="../index.php">Cotonnade & Co'</a>
+    </section>
+    <nav class="rs">
+      <a href="#"><i class="fab fa-facebook-square"></i></a>
+      <a href="#"><i class="fab fa-instagram-square"></i></a>
+      <a href="#"><i class="fab fa-pinterest-square"></i></a>
+    </nav>
+    <section class="btn-group">
+        <a href="register.php" class="btn_new">Créer un compte</a>
+    </section>
+  </header>
+  <main class="login_main">
+    <form class="login_form" action="login.php" method="post">
+      <ul>
+        <li>
+          <h2>Connexion</h2>
+        </li>
+        <?php if (isset($_GET['error']) && !empty($_GET['error'])): ?>
+          <div class="login_error">
+            <h3><?= $error ?></h3>
+          </div>
+        <?php endif ?>
+        <li>
+          <label for="email">Email :</label>
+          <input type="email" name="email" value="<?= $email ?>"/>
+        </li>
+        <li>
+          <label for="password">Mot de passe :</label>
+          <input type="password" name="password">
+        </li>
+        <?php if(isset($_SESSION['cookie']) && $_SESSION['cookie'] == "yes"): ?>
+          <div class="login_checkbox">
+            <input type="checkbox" id="rememberMe" name="rememberMe" value="true">
+            <label for="rememberMe"><span title="Retient uniquement votre email pour la prochaine connexion">Se souvenir de moi</span></label>
+          </div>
+        <?php endif; ?>
+        <li>
+          <button type="submit">Se connecter</button>
+        </li>
+      </ul>
+    </form>
+  </main>
+  </body>
+</html>
