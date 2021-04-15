@@ -1,0 +1,48 @@
+<?php if(session_status() == PHP_SESSION_NONE): ?>
+    <?php session_start(); ?>
+<?php endif; ?>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Cotonnade & Co.</title>
+</head>
+<body>
+  <header>
+    <section class="group_logo">
+      <a class="logo" href="index.php">Cotonnade & Co'</a>
+      <div class="btn_compte">
+        <?php if (isset($_SESSION['auth'])): ?>
+        <a href="connexion/logout.php">
+          <i class="fas fa-sign-out-alt"></i>
+          <p>Déconnexion</p>
+        </a>
+        <?php else: ?>
+          <a href="connexion/login.php">
+            <i class="fas fa-user-circle"></i>
+            <p>Compte</p>
+          </a>
+        <?php endif; ?>
+        <a href="cart.php">
+          <?php if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])): ?>
+            <i class="fas fa-circle notif"></i>
+          <?php endif; ?>
+          <i class="fas fa-shopping-cart"></i>
+          <p>Panier</p>
+        </a>
+      </div>
+    </section>
+    <nav class="rs">
+      <a href="#"><i class="fab fa-facebook-square"></i></a>
+      <a href="#"><i class="fab fa-instagram-square"></i></a>
+      <a href="#"><i class="fab fa-pinterest-square"></i></a>
+    </nav>
+  </header>
+  <?php require $template . '.phtml' ?>
+</body>
+</html>

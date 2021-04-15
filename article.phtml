@@ -1,0 +1,43 @@
+<main>
+  <section class="article_top">
+    <section class="show-picture">
+      <div>
+        <img src="<?= $article['picture'] ?>" alt="<?= $article['alt'] ?>" />
+      </div>
+    </section>
+    <section class="article_price">
+      <h1 class="article_title"><?= htmlspecialchars($article['title']) ?></h1>
+      <h2><?= $article['price'] ?> €</h2>
+      <?php if (!empty($article['lots'])): ?>
+        <h3 class="lots">/ lots de <?= $article['lots']?></h3>
+      <?php endif; ?>
+      <div class="addcart">
+        <?php if($article['stock'] != 0): ?>
+          <select id="quantity" name="quantity">
+            <?php foreach($stock as $value): ?>
+              <option value="<?= $value ?>"><?= $value ?></option>
+            <?php endforeach; ?>
+          </select>
+          <input type="hidden" value="<?= $article['id'] ?>" id="id" name='id'/>
+          <button id="submit">Ajouter au panier</button>
+        </div>
+      <?php else: ?>
+        <p>Rupture de stock</p>
+      <?php endif; ?>
+      </form>
+    </section>
+  </section>
+  <section class="describe">
+    <h2>Description</h2>
+    <p><?= nl2br(htmlspecialchars($article['description'])) ?></p>
+  </section>
+  <section class="describe">
+    <h2>Détails</h2>
+    <p><?= nl2br(htmlspecialchars($article['more_about'])) ?></p>
+  </section>
+</main>
+<div class="popup hidden" id="popup">
+  <h2><i class="fas fa-check-circle"></i>  Ajouté au panier</h2>
+</div>
+<script src="js/jquery-3.5.1.js"></script>
+<script src="js/article.js"></script>

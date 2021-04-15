@@ -1,0 +1,35 @@
+<main class="cartmain">
+<?php if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])): ?>
+<h1>Votre panier :</h1>
+    <?php foreach($articles as $article): ?>
+      <section class="section">
+        <div class="row">
+          <img src="<?= $article['picture'] ?>" alt="<?= $article['alt'] ?>" />
+          <section class="aside">
+            <a href="article.php?id=<?= $article['id'] ?>"><h3><?= $article['title'] ?></h3></a>
+            <div class="quantity">
+              <p>Quantity :</p>
+              <p><?= $article['quantity'] ?></p>
+              <input id="stock<?= $j ?>" type="hidden" value="<?= $article['stock'] ?>" />
+            </div>
+            <button id="delete<?= $j ?>" value="<?= $article['id'] ?>">Supprimer l'article</button>
+            <?php $j++; ?>
+          </section>
+        </div>
+        <div class="cart_price">
+          <h3>Prix :</h3>
+          <h3><span id="total_article"><?= $article['total'] ?></span> €</h3>
+        </div>
+      </section>
+    <?php endforeach; ?>
+    <h2 class="cart_total">Total : <span id="sous_total"></span></h2>
+<form class="btn_form" action="cart.php" method="post">
+  <input type="hidden" name="value" value="true" />
+  <button class="button" type="submit">Passer la commande</button>
+</form>
+<?php else: ?>
+  <h2>Votre panier est vide</h2>
+<?php endif; ?>
+</main>
+<script src="js/jquery-3.5.1.js"></script>
+<script src="js/cart.js"></script>
