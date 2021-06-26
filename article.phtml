@@ -1,0 +1,88 @@
+<main>
+  <section class="article_top">
+    <section class="show-picture">
+      <div class="art_picture">
+        <img src="<?= $article['picture'] ?>" id="img" alt="<?= $article['alt'] ?>" />
+        <p>Cliquez sur l'image pour zoomer.</p>
+      </div>
+      <section id="zoom" class="zoom hidden"></section>
+    </section>
+    <section class="article_price">
+      <h1 class="article_title"><?= htmlspecialchars($article['title']) ?></h1>
+      <h2><?= $article['price'] ?> €</h2>
+      <?php if (!empty($article['lots'])): ?>
+        <h3 class="lots">/ lots de <?= $article['lots']?></h3>
+      <?php endif; ?>
+      <div class="addcart">
+        <?php if($article['stock'] != 0): ?>
+          <select id="quantity" name="quantity">
+            <?php foreach($stock as $value): ?>
+              <option value="<?= $value ?>"><?= $value ?></option>
+            <?php endforeach; ?>
+          </select>
+          <input type="hidden" value="<?= $article['id'] ?>" id="id" name='id'/>
+          <button id="submit">Ajouter au panier</button>
+        </div>
+      <?php else: ?>
+        <p>Rupture de stock</p>
+      <?php endif; ?>
+    </section>
+  </section>
+  <div class="articles_bottom">
+    <div class="describearea">
+      <section class="describe">
+        <h2>Description</h2>
+        <p><?= nl2br(htmlspecialchars($article['description'])) ?></p>
+      </section>
+      <section class="describe">
+        <h2>Détails</h2>
+        <p><?= nl2br(htmlspecialchars($article['more_about'])) ?></p>
+      </section>
+    </div>
+    <section class="commentsarea">
+      <h2>Commentaires</h2>
+      <div>
+        <?php if(empty($comments) || !isset($comments)): ?>
+          <p class="empty">Aucun commentaire pour le moment.</p>
+        <?php else: ?>
+          <ul class="commentlist">
+            <?php foreach ($comments as $comment): ?>
+              <li class="comment">
+                <h3><?= nl2br(htmlspecialchars($comment['title'])) ?></h3>
+                <span class="name">écrit par : <?= nl2br(htmlspecialchars($comment['first_name'])) ?></span>
+                <p><?= nl2br(htmlspecialchars($comment['content'])) ?></p>
+              </li>
+            <?php endforeach; ?>
+          </ul>
+        <?php endif; ?>
+      </div>
+      <?php if(isset($_SESSION['auth']) && !empty($_SESSION['auth'])): ?>
+        <form class="comment-form" id="art_form">
+          <h2>Ecrire un commentaire</h2>
+          <ul>
+            <li>
+              <label for="title">Titre :</label>
+              <input type="text" name="title" id="title" />
+            </li>
+            <li>
+              <label for="content">Commentaire :</label>
+              <textarea name="content" id="content" maxlength="900"></textarea>
+              <input type="hidden" id="art_id" value="<?= $_GET["id"] ?>" />
+            </li>
+          </ul>
+          <button id="commentSubmit">Envoyer</button>
+        </form>
+      <?php else: ?>
+        <div class="notconnected">
+          <h3><a href="connexion/login.php">Connectez vous</a> pour écrire un commentaire.</h3>
+        </div>
+      <?php endif; ?>
+    </section>
+  </div>
+</main>
+<div class="popup hidden" id="popup">
+  <h2><i class="fas fa-check-circle"></i>  Ajouté au panier</h2>
+</div>
+<script src="js/jquery-3.5.1.js"></script>
+<script src="js/article.js"></script>
+<script src="js/zoom.js"></script>
